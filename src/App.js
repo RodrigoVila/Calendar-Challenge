@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import { Calendar } from './Calendar';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const fakeEvents = [{
+    date: new Date(),
+    title: 'Trash day!',
+}, {
+    date: new Date(),
+    title: 'Other stuff',
+}];
+
+export const App = () => {
+    const today = new Date();
+    const events = useState(fakeEvents);
+    
+    const onClickDate = selectedDate => {
+        alert(`User clicked: ${selectedDate.toLocalDateString()}`);
+    }
+
+    return (
+        <div style={{ width: '700px', height: '400px' }}>
+            <Calendar
+                events={events}
+                onClickDate={onClickDate}
+                startingDate={today} />
+        </div>
+    );
 }
-
-export default App;

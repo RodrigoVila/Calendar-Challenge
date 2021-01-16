@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# Shaun's Calendar Challenge! 🗓
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The challenge here is to **create a reusable, vanilla-React calendar component**
 
-## Available Scripts
+Sound boring? Wait ‘til you’ve tried it 😉 I had to do this recently for a project of mine and I was surprised at how many twists and turns were involved.
 
-In the project directory, you can run:
+## When you're done, create a Github repo with your completed code and send me a direct-message with the link
 
-### `npm start`
+## Submissions for the FREE ACCESS drawing must meet the following criteria:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. **The calendar must “look like” a real calendar** - i.e. everything should be aligned in a 7-column grid, and the left-most column should be Sunday (or Saturday, or Monday, or whatever weekday your week starts on - I think I remember hearing that this is different in different parts of the world)
+2. **The calendar must start by showing whatever month the `startingDate` prop belongs to** - note that in the `App.js` component, we’re currently passing `today`, but there are many situations where we’d want to pass a different `startingDate` and have the calendar jump to a different month in the past/future.
+3. **The calendar must display the name of the current month, and allow the user to flip between different months** - note the “previous” and “next” buttons in the screenshot above - you’ll want to add something like these.
+4. **The calendar component must take an `events` prop, and display those events on their corresponding days** - a list of fake event data is provided in `App.js` to show you the basic format of event data - look for the `fakeEvents`array and you’ll see what I mean.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## And for bonus points (you don’t have to do these, but they’re fun):
 
-### `npm test`
+1. **The calendar itself should occupy 100% of the width and height of its container** - this allows whatever component we display the calendar inside of to decide the calendar’s size, which can make it much easier to insert this calendar into existing layouts. You’ll see that in `App.js`, the `Calendar` component is wrapped in a `div` with `height: ‘700px’` and `width: ‘400px’`. Feel free to play around with the size here and see if you can make your calendar responsive
+2. **Allow users to add new events to the calendar** by clicking on one of the calendar cells. I’ve already provided the `onDateClicked` prop for this purpose
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## And some hints:
 
-### `npm run build`
+1. JavaScript’s `Date` is going to be your friend here
+2. You can tell if two `Dates` are equal by just comparing their year, month, and date and see if all of those are the same
+3. You may want to create some sort of `getDatesForMonth` function which takes `year` and a `month` arguments and returns a date object for all 28 or 29 or 30 or 31 days in the month. Just a suggestion...
+4. You’re allowed to use whatever styling libraries you want, but no libraries that take care of the calendar logic! That would be cheating ;)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting the app running
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone this repo with: `git clone https://github.com/shaunwa/calendar-challenge-starter.git calendar-challenge`
+2. `cd calendar-challenge`
+3. Install dependencies: `npm install`
+4. Run it: `npm run start`
+5. See it running on localhost:3000
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+That's it!
