@@ -6,6 +6,7 @@ Sound boring? Wait ‘til you’ve tried it 😉 I had to do this recently for a
 
 ## When you're done, create a Github repo with your completed code and send me a direct-message with the link
 
+Here's what my solution looks like (note the fashionable dark-mode 😎):
 ![completed calendar example](./public/example-screen-shot.png)
 
 ## Submissions for the FREE ACCESS drawing must meet the following criteria:
