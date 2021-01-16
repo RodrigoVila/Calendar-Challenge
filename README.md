@@ -6,6 +6,8 @@ Sound boring? Wait ‘til you’ve tried it 😉 I had to do this recently for a
 
 ## When you're done, create a Github repo with your completed code and send me a direct-message with the link
 
+![completed calendar example](./public/example-screen-shot.png)
+
 ## Submissions for the FREE ACCESS drawing must meet the following criteria:
 
 1. **The calendar must “look like” a real calendar** - i.e. everything should be aligned in a 7-column grid, and the left-most column should be Sunday (or Saturday, or Monday, or whatever weekday your week starts on - I think I remember hearing that this is different in different parts of the world)
